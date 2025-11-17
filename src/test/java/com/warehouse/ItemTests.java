@@ -36,7 +36,7 @@ public class ItemTests {
     }
 
     @Test
-    public void testNoDuplicateNames() throws SQLException {
+    public void testNoDuplicateNames() throws SQLException {  
 
         ResultSet rs = stmt.executeQuery(
                 "SELECT Name, COUNT(*) AS count FROM Items GROUP BY Name HAVING COUNT(*) > 1"
